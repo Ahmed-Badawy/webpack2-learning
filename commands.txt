@@ -1,0 +1,42 @@
+$ npm init -y //npm start & yes to everything
+
+$ npm install webpack -D
+$ npm install webpack -g
+
+
+$ webpack src/main.js dist/main.js  //compile in webpack for one time
+$ webpack src/main.js dist/main.js --watch //compile in webpack & then watch it
+
+/*********************************************************************
+Add These to your scripts:-
+**********************************************************************/
+    "build": "webpack src/main.js dist/main.js", 
+    "keepEye": "npm run build -- --watch"  //this is how to pass flags to child scripts( just append the flag with --) 
+
+
+//now create the webpack.config.js file: 
+after that you can run it directly like:  $ webpack   "or"   $ webpack --watch
+
+
+
+$ npm install raw-loader -D     // install the raw loader
+$ npm install css-loader -D     // install the css loader
+$ npm install style-loader -D     // manipulate the css & inject it to the page
+//for babel you need to install these & create the .babelrc file
+$ npm install babel-loader babel-core babel-preset-es2015 -D   //install babel to convert es6 to js
+
+$ npm install extract-text-webpack-plugin -D
+
+$ npm install sass-loader node-sass -D
+
+
+$ npm install stylus-loader stylus -D //didn't work
+
+
+
+
+
+
+
+
+
